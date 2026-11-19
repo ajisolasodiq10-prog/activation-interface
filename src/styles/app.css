@@ -1,0 +1,72 @@
+/* Account Management Frontend: plain CSS, text only. */
+:root {
+  --navy: #12284c;
+  --teal: #0f7c8a;
+  --teal-dark: #0b5f6b;
+  --text: #1f2933;
+  --muted: #5b6770;
+  --bg: #f3f5f8;
+  --white: #fff;
+  --border: #c9d1da;
+  --ok: #1d6b3a; --ok-bg: #e8f5ec;
+  --bad: #a12b2b; --bad-bg: #fcecec;
+  --info-bg: #eaf3f8;
+  --radius: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size: 1rem; line-height: 1.55; color: var(--text); background: var(--bg); }
+h1 { margin: 0 0 0.75rem; font-size: 1.6rem; line-height: 1.25; color: var(--navy); }
+p { margin: 0 0 1rem; }
+a { color: var(--teal-dark); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+main:focus { outline: none; }
+
+.page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+.site-header { width: 100%; max-width: 32rem; padding: 1rem 0; text-align: center; }
+.site-title { margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--navy); }
+.site-subtitle { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.card { width: 100%; max-width: 32rem; padding: 1.5rem 1.25rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+.site-footer { width: 100%; max-width: 32rem; padding: 1rem 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.site-footer p { margin: 0; }
+@media (min-width: 640px) { .page { padding: 2rem 1rem; } .card { padding: 2rem; } h1 { font-size: 1.85rem; } }
+
+.muted { color: var(--muted); font-size: 0.95rem; }
+.plain-list { padding-left: 1.2rem; }
+.plain-list li { margin-bottom: 0.6rem; }
+
+.field { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.3rem; font-weight: 600; color: var(--navy); }
+input { width: 100%; min-height: 2.9rem; padding: 0.6rem 0.8rem; font: inherit; color: var(--text); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+input[aria-invalid="true"] { border-color: var(--bad); }
+input:disabled { background: #eef1f4; }
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 5rem; }
+.toggle { position: absolute; top: 0; right: 0; height: 100%; min-width: 4.25rem; padding: 0 0.8rem; font: inherit; font-weight: 600; color: var(--teal-dark); background: transparent; border: 0; border-radius: 0 var(--radius) var(--radius) 0; cursor: pointer; }
+.field-error { margin: 0.35rem 0 0; color: var(--bad); font-size: 0.95rem; }
+
+.btn { display: inline-block; min-height: 2.9rem; padding: 0.65rem 1.25rem; font: inherit; font-weight: 600; text-align: center; text-decoration: none; border: 2px solid transparent; border-radius: var(--radius); cursor: pointer; }
+.btn-primary { color: var(--white); background: var(--teal-dark); }
+.btn-primary:hover { background: var(--navy); }
+.btn-block { display: block; width: 100%; }
+.btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.notice { margin: 0 0 1rem; padding: 0.85rem 1rem; border-radius: var(--radius); border-left: 5px solid; }
+.notice p { margin: 0 0 0.5rem; } .notice p:last-child { margin-bottom: 0; }
+.notice ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.notice-title { font-weight: 700; }
+.notice-error { color: #6e1b1b; background: var(--bad-bg); border-color: var(--bad); }
+.notice-success { color: #14502b; background: var(--ok-bg); border-color: var(--ok); }
+.notice-info { background: var(--info-bg); border-color: var(--teal); }
+
+.requirements, .help { margin: 0 0 1.25rem; padding: 0.85rem 1rem; background: #f7f9fb; border: 1px solid var(--border); border-radius: var(--radius); }
+.requirements p, .help p { margin: 0 0 0.4rem; } .requirements p:last-child, .help p:last-child { margin-bottom: 0; }
+.requirements ul, .help ul { margin: 0 0 0.5rem; padding-left: 1.2rem; }
+.requirements-title, .help-title { font-weight: 700; color: var(--navy); }
+.help { margin-top: 1.5rem; }
+
+.strength { margin: -0.4rem 0 1rem; font-size: 0.92rem; color: var(--muted); }
+.strength strong { padding: 0.05rem 0.4rem; border-radius: 4px; color: var(--white); }
+.strength-1 strong { background: var(--bad); } .strength-2 strong { background: #8a5a00; } .strength-3 strong { background: var(--ok); }
+
+.loading { margin: 1.5rem 0; color: var(--muted); font-weight: 600; }

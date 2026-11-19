@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../account-backend"
+		},
+		{
+			"path": "../../../server"
+		},
+		{
+			"path": "../../../school-website"
+		}
+	],
+	"settings": {}
+}
