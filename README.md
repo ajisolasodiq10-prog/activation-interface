@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Account Management Frontend
 
 A small, separate React + Vite app for **account activation, first-password setup and password reset**.
@@ -73,3 +74,7 @@ Aligned with the Account Management Backend (`account-backend/docs/API.md`, publ
 See [API_CONTRACT.md](API_CONTRACT.md) for the exact requests this app makes. All backend calls live in `src/services/accountApi.js`.
 On the backend set `ACCOUNT_MANAGEMENT_FRONTEND_URL` to this site's address and keep `ACTIVATION_PATH=/activate` and
 `RESET_PATH=/reset-password` (the defaults), and make sure this site's origin is allowed by CORS.
+=======
+# activation-interface
+school account activation test
+>>>>>>> a138b6c7e0504e069238b4a023b1b7a9398cf5da
